@@ -141,7 +141,7 @@ class PdoUserRepository implements UserRepository
         $stmt = $this->connection->prepare($sqlQuery);
         $stmt->execute();
 
-        $userDataList = $stmt->fetchAll(fetch_style: PDO::FETCH_ASSOC); // Aqui é onde retorna uma array!
+        $userDataList = $stmt->fetchAll(fetch_style: PDO::FETCH_ASSOC);
 
         $userDataList = array_unique($userDataList);
         
